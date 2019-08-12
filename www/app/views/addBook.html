@@ -1,0 +1,73 @@
+
+<div class="menuLeftSide" >
+    <table id="tab">
+        <tr ng-repeat="list in navList">
+            <td class="menuButton clickable-row" data-href="{{list.navUrl}}"  style="border-top: 2px solid white;">
+                <table style="width:100%;">
+                    <tr>
+
+                        <td class="menuText">
+                            <a class="menuLink menuColor" href="{{list.navUrl}}" style="text-decoration: none;font-size: 16px;">{{list.title}}</a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+</div>
+
+
+<div>
+    <fieldset >
+        <legend >ADD Cabs </legend>
+        <table >
+            <tr>
+                <td>
+                    <div >
+                        <table >
+                            <tr>
+                                <td >Cab Name</td>
+                                <td><input  class="form-control" style="cursor:text;"
+                                                              type="text"
+                                                              ng-model="cabDetails.name"></td>
+                            </tr>
+                            <tr>
+                                <td >Driverno</td>
+                                <td><input  class="form-control" style="cursor:text;"
+                                           type="text"
+                                           ng-model="cabDetails.driverno"></td>
+                            </tr>
+
+                            <tr>
+                                <td >costPerkm</td>
+                                <td><input  class="form-control" placeholder="Number"style="cursor:text;"
+                                           type="text"
+                                           ng-model="cabDetails.costPerkm"></td>
+                            </tr>
+                            <tr>
+                                <td >reg</td>
+                                <td><input  class="form-control" placeholder="Number " style="cursor:text;"
+                                           type="text"
+                                           ng-model="cabDetails.reg"></td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+
+
+    </fieldset>
+    <button type="button" class="btn btn-primary" ng-click="savecabDetails()">Save</button>
+
+    <div style="color: black">{{cab_info}}</div>
+</div>
+
+
+<div>
+    <button type="button" class="btn btn-danger" style="top: 0;position: fixed;
+  right: 0;" ng-click="logout()">LogOut</button>
+</div>
